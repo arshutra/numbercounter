@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<link rel="shortcut icon" href="img.jpg" type="image/x-icon">
+<STyle>
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@700&family=Fuzzy+Bubbles:wght@700&family=Poppins:wght@300&family=Rubik+Gemstones&display=swap');
+     
+     *{
+        margin: 0;padding: 0;
+     }
+
+
+     .container{
+        display: flex;
+        align-items: center;justify-content: center;flex-direction: column;gap: 30px;
+        height: 100vh;
+     }
+
+     h1 ,h2{
+        font-size: 50px;
+        font-family: 'Fuzzy Bubbles', cursive;
+        color: rgb(0, 0, 0);
+    }
+    button{
+        border: 2px solid black;
+        padding: 10px;background: transparent;width: 200px;
+        font-size: 18px;font-family: 'Fuzzy Bubbles', cursive;
+        border-radius: 20px;
+     }
+     button:hover{
+        background-color: #0f0f0f;
+        color: whitesmoke;
+        transition: 1s;
+     }
+</STyle>
+<body>
+    <div class="container">
+        <h1>Counter</h1>
+        <h2 id="number">0</h2>
+        <button id="dec">DECREASE</button>
+        <button id="re">RESET</button>
+        <button id="inc">INCREASE</button>
+    </div>
+
+    <script>
+        const dec=document.getElementById("dec")
+        const reset=document.getElementById("re")
+        const inc=document.getElementById("inc")
+        let number=document.getElementById("number")
+
+
+        let i=0
+        dec.addEventListener("click",function(){
+            i-=1
+            number.innerHTML=i
+            number.style.color="red"
+        })
+        reset.addEventListener("click",function(){
+            i=0
+            number.innerHTML=i
+            number.style.color="black"
+        })
+        inc.addEventListener("click",function(){
+            i+=1
+            number.innerHTML=i
+            number.style.color="green"
+        })
+    </script>
+</body>
+
+
+</html>
